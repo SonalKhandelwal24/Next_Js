@@ -12,6 +12,7 @@ interface User {
 }
 
 export default function Home() {
+
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [userid, setUserid] = useState<string>("");
   const [username, setUsername] = useState<string>("");
@@ -39,7 +40,7 @@ export default function Home() {
     setselectedName(name);
     let filtered = userdata;
     if (name !== "") {
-      filtered = filtered.filter((user) =>
+      filtered = filtered.filter((user) => 
         user.username.toLowerCase().includes(name.toLowerCase())
       );
     }
@@ -67,17 +68,10 @@ export default function Home() {
   const addDetails = async () => {
     let response = await fetch('http://localhost:3000/api/users', {
       method: "POST",
-      body: JSON.stringify({ userid, username, phone_number, status })
+      body: JSON.stringify({ username, phone_number, status })
     });
-    if (!response.ok) {
-      // Handle HTTP errors
-      const errorText = await response.text();
-      console.error("HTTP error:", response.status, errorText);
-      return;
-    }
     let data = await response.json();
     if (data.success) {
-      setUserid("")
       setUsername("");
       setPhonenumber("");
       setStatus("");
@@ -110,7 +104,6 @@ export default function Home() {
     if (record.success) {
       alert("User details are deleted");
       fetchData();
-
     } else {
       console.error("Failed to delete user data ");
     }
@@ -165,7 +158,7 @@ export default function Home() {
           </div>
 
           <table className="min-w-full bg-white border border-gray-300">
-            <thead className="bg-gray-200 border-b">
+            <thead className="bg-gray-600 text-gray-200 tborder-b">
               <tr>
                 <th className="py-2 px-4 border-r">Id</th>
                 <th className="py-2 px-4 border-r">Name</th>
