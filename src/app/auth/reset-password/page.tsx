@@ -24,7 +24,7 @@ export default function page() {
             return;
         }
         try {
-            const response = await fetch(`http://192.168.1.64:3000/auth/reset-password?token=${token}`, {
+            const response = await fetch(`http://192.168.1.10:3000/auth/reset-password?token=${token}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json", // Add this headercd

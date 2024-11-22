@@ -18,7 +18,7 @@ export default function page() {
         e.preventDefault(); // Prevent form submission (page reload)
 
         try {
-            const response = await fetch('http://192.168.1.64:3000/auth/login', {
+            const response = await fetch('http://192.168.1.10:3000/auth/login', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json", // Add this headercd

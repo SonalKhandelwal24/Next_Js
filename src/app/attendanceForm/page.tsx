@@ -18,7 +18,7 @@ export default function Home() {
   // useEffect(() => {
   //   const getdata = async () => {
   //     try {
-  //       const response = await fetch('http://192.168.1.64:3000/auth/login');
+  //       const response = await fetch('http://192.168.1.10:3000/auth/login');
   //       if (!response.ok) throw new Error("Network response was not ok");
         
   //       const data = await response.json();
@@ -47,7 +47,7 @@ export default function Home() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://192.168.1.64:3000/attendance',
+      const response = await fetch('http://192.168.1.10:3000/attendance',
         {
           method: "Post",
           headers: {

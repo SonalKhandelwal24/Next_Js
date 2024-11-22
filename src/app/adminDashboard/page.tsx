@@ -36,7 +36,7 @@ export default function page() {
 
     const getAllData = async () => {
         try {
-            const response = await fetch('http://192.168.1.64:3000/user');
+            const response = await fetch('http://192.168.1.10:3000/user');
             if (!response.ok) {
                 throw new Error("Failed to fetch user data");
             }
@@ -77,7 +77,7 @@ export default function page() {
         console.log("Payload:", JSON.stringify(updatedUser));
 
         try {
-            const res = await fetch(`http://192.168.1.64:3000/user/${currentUser._id}`, {
+            const res = await fetch(`http://192.168.1.10:3000/user/${currentUser._id}`, {
                 method: "PATCH",
                 headers: {
                     'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ export default function page() {
 
     const deleteUser = async (id: Key) => {
         try {
-            const res = await fetch(`http://192.168.1.64:3000/user/${id}`, {
+            const res = await fetch(`http://192.168.1.10:3000/user/${id}`, {
                 method: "DELETE",
             });
             if (!res.ok) {

@@ -12,7 +12,7 @@ export default function page() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://192.168.1.64:3000/auth/forgot-password', {
+            const response = await fetch('http://192.168.1.10:3000/auth/forgot-password', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json", // Add this headercd

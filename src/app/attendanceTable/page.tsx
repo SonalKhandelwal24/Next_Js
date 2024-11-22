@@ -34,7 +34,7 @@ export default function page() {
 
     const getAllData = async () => {
         try {
-            const response = await fetch('http://192.168.1.64:3000/attendance');
+            const response = await fetch('http://192.168.1.10:3000/attendance');
             const data = await response.json();
             console.log(data);
             setAllUserAttendance(data);
@@ -69,7 +69,7 @@ export default function page() {
             };
             console.log("Current user", JSON.stringify(updatedUser));
 
-            const res = await fetch(`http://192.168.1.64:3000/attendance/${currentUser._id}`, {
+            const res = await fetch(`http://192.168.1.10:3000/attendance/${currentUser._id}`, {
                 method: "PATCH",
                 headers: {
                     'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ export default function page() {
 
     const deleteUser = async (id: Key) => {
         try {
-            const res = await fetch(`http://192.168.1.64:3000/attendance/${id}`, {
+            const res = await fetch(`http://192.168.1.10:3000/attendance/${id}`, {
                 method: "DELETE",
             });
             if (!res.ok) {
