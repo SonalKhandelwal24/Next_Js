@@ -12,7 +12,6 @@ export async function GET() {
         console.log('Connected to MongoDB');
     }).catch((err) => {
         console.error('Error connecting to MongoDB', err);
-
     });
 
     const data = await UserData.find();
@@ -20,6 +19,7 @@ export async function GET() {
     return NextResponse.json({ result: data, success: true }, { status: 200 })
 
 }
+
 export async function POST(request, content) {
 
     const payload = await request.json();
@@ -38,6 +38,7 @@ export async function POST(request, content) {
 
     // Add the new user ID to the payload
     payload.userid = nextuserId;
+    console.log(payload);    
     const data = new UserData(payload);
     const result = await data.save();
     // console.log(data);    
