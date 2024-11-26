@@ -1,0 +1,22 @@
+.login-menu{
+    display: flex;
+}
+.login-menu li{
+    margin-left: 25px;
+   list-style: none;
+}
+.login-menu li a{
+    text-decoration: none;
+    font: bold;
+}
+.login-menu h4{
+    margin: 0PX;
+}
+.heading{
+    color: brown;
+    text-align: center;
+}
+
+/* .btn{
+    margin-left: 35%;
+} */

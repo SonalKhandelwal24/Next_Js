@@ -1,0 +1,29 @@
+.about-menu{
+    display: flex;
+}
+.about-menu li{
+    margin-left: 25px;
+    list-style: none;
+}
+.about-menu li a{
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+}
+.about-menu h4{
+    margin: 0;
+    font-size: large;
+    font-weight: 600;
+    color: brown;
+}
+.heading{
+    color: rgb(24, 47, 48);
+    text-align: center;
+    margin-top: 200px;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.btn{
+    margin-top: 10px;
+    margin-left: 45%;
+}
