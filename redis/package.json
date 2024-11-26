@@ -1,0 +1,19 @@
+{
+  "name": "redis",
+  "version": "1.0.0",
+  "main": "dist/string.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/string.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ioredis": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "typescript": "^4.7.4"
+  }
+}
