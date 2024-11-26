@@ -9,6 +9,7 @@ export default function page() {
 
     const [state, setstate] = useState([])
     const router = useRouter();
+    
     const getData = async () => {
         try {
             let response = await fetch('http://localhost:3000/api/books', { cache: "no-cache" });
